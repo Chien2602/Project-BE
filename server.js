@@ -5,6 +5,8 @@ const accountRoute = require("./routes/admin/accountRoute");
 const authRoute = require("./routes/admin/authRoute");
 const app = express();
 app.use(express.json());
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 const port = process.env.PORT || 5000;
 connectMongodb();
 
